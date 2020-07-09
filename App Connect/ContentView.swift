@@ -26,15 +26,16 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             AppListView(selection: $selection, data: $apps)
-//                .frame(minWidth: 250, minHeight: 400)
-            DetailView(text: "Make a selection")
+            MainView()
         }
         .onChange(of: api.apps) { value in
             apps = value
         }
         .onAppear {
             api.getApps()
+//            api.getAppInfo(id: "1500158254")
         }
+        .frame(minWidth: 1200, minHeight: 800)
     }
 }
 

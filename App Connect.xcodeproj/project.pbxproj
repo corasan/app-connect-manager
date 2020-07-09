@@ -17,6 +17,8 @@
 		BAB693F924B6D3B1006FC750 /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = BAB693F824B6D3B1006FC750 /* SwiftJWT */; };
 		BAB693FB24B6D414006FC750 /* AppConnectAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB693FA24B6D413006FC750 /* AppConnectAuthorization.swift */; };
 		BAB693FD24B6D445006FC750 /* AppConnectAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB693FC24B6D445006FC750 /* AppConnectAPI.swift */; };
+		BAB6940024B78C47006FC750 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB693FF24B78C47006FC750 /* MainView.swift */; };
+		BAB6940224B78C5D006FC750 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB6940124B78C5D006FC750 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		BAB693F224B6CAEF006FC750 /* DeveloperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperApp.swift; sourceTree = "<group>"; };
 		BAB693FA24B6D413006FC750 /* AppConnectAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConnectAuthorization.swift; sourceTree = "<group>"; };
 		BAB693FC24B6D445006FC750 /* AppConnectAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConnectAPI.swift; sourceTree = "<group>"; };
+		BAB693FF24B78C47006FC750 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		BAB6940124B78C5D006FC750 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 		BAB693DB24B6BEE3006FC750 /* App Connect */ = {
 			isa = PBXGroup;
 			children = (
+				BAB693FE24B786B0006FC750 /* Views */,
 				BAB693EF24B6CAC0006FC750 /* Model */,
 				BAB693EC24B6C0B4006FC750 /* Components */,
 				BAB693DC24B6BEE3006FC750 /* App_ConnectApp.swift */,
@@ -89,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				BAB693ED24B6C714006FC750 /* AppListView.swift */,
+				BAB6940124B78C5D006FC750 /* TabBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -101,6 +107,14 @@
 				BAB693FC24B6D445006FC750 /* AppConnectAPI.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BAB693FE24B786B0006FC750 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BAB693FF24B78C47006FC750 /* MainView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,7 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB693F324B6CAEF006FC750 /* DeveloperApp.swift in Sources */,
+				BAB6940024B78C47006FC750 /* MainView.swift in Sources */,
 				BAB693FB24B6D414006FC750 /* AppConnectAuthorization.swift in Sources */,
+				BAB6940224B78C5D006FC750 /* TabBar.swift in Sources */,
 				BAB693DF24B6BEE3006FC750 /* ContentView.swift in Sources */,
 				BAB693DD24B6BEE3006FC750 /* App_ConnectApp.swift in Sources */,
 				BAB693EE24B6C714006FC750 /* AppListView.swift in Sources */,

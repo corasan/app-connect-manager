@@ -38,5 +38,11 @@ class AppConnectAPI: ObservableObject {
             }
         }
     }
+    
+    func getAppInfo(id: String) {
+        get("apps/\(id)/appInfos") { res in
+            print(res)
+        }
+    }
 }
 
