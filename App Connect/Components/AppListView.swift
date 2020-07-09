@@ -14,7 +14,7 @@ struct AppListView: View {
     var body: some View {
         List(selection: $selection) {
             ForEach(data) { item in
-                NavigationLink(destination: DetailView(text: item.name)) {
+                NavigationLink(destination: MainView(app: item)) {
                     HStack {
                         Rectangle()
                             .frame(width: 42, height: 42)

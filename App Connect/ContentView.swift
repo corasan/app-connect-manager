@@ -9,15 +9,6 @@ import SwiftUI
 
 import SwiftUI
 
-struct DetailView: View {
-    let text: String
-
-    var body: some View {
-        Text(text)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-}
-
 struct ContentView: View {
     @EnvironmentObject var api: AppConnectAPI
     @State private var selection: String? = ""
@@ -26,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             AppListView(selection: $selection, data: $apps)
-            MainView()
+//            MainView()
         }
         .onChange(of: api.apps) { value in
             apps = value

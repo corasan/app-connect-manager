@@ -9,15 +9,19 @@ import SwiftUI
 
 struct MainView: View {
     @State var selected = 0
+    var app: DeveloperApp
 
     var body: some View {
         VStack {
             TabBar(selected: $selected)
             Spacer()
-            ScrollView {
-                
+            switch self.selected {
+            case 0: BuildsView().background(Color.blue)
+            case 1: BuildsView().background(Color.green)
+            case 2: BuildsView().background(Color.pink)
+            default:
+                BuildsView().background(Color.red)
             }
-            .background(Color.blue)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
@@ -25,6 +29,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(app: DeveloperApp(id: "1", name: "Stocket", bundleId: "com.corasan.stocket"))
     }
 }
