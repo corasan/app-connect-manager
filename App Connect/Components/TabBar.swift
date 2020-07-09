@@ -17,8 +17,11 @@ struct TabBar: View {
     var tabs = ["Builds", "Testflight", "Activity"]
     
     private func renderTab(index: Int, label: String) -> some View {
-        Button(label) {
-            print("selected \(label)")
+        Button(action: {
+            selected = index
+        }) {
+            Text(label)
+                .font(.system(size: 18, weight: .semibold))
         }
         .buttonStyle(PlainButtonStyle())
         .padding(.horizontal, 55)
