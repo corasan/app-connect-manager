@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct App_ConnectApp: App {
+    @StateObject var api = AppConnectAPI()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(api)
         }
     }
 }

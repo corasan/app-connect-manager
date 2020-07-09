@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		BAB693E424B6BEE3006FC750 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB693E324B6BEE3006FC750 /* Preview Assets.xcassets */; };
 		BAB693EE24B6C714006FC750 /* AppListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB693ED24B6C714006FC750 /* AppListView.swift */; };
 		BAB693F324B6CAEF006FC750 /* DeveloperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB693F224B6CAEF006FC750 /* DeveloperApp.swift */; };
+		BAB693F624B6CEFE006FC750 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BAB693F524B6CEFE006FC750 /* Alamofire */; };
+		BAB693F924B6D3B1006FC750 /* SwiftJWT in Frameworks */ = {isa = PBXBuildFile; productRef = BAB693F824B6D3B1006FC750 /* SwiftJWT */; };
+		BAB693FB24B6D414006FC750 /* AppConnectAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB693FA24B6D413006FC750 /* AppConnectAuthorization.swift */; };
+		BAB693FD24B6D445006FC750 /* AppConnectAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB693FC24B6D445006FC750 /* AppConnectAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,8 @@
 		BAB693E624B6BEE3006FC750 /* App_Connect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App_Connect.entitlements; sourceTree = "<group>"; };
 		BAB693ED24B6C714006FC750 /* AppListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListView.swift; sourceTree = "<group>"; };
 		BAB693F224B6CAEF006FC750 /* DeveloperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperApp.swift; sourceTree = "<group>"; };
+		BAB693FA24B6D413006FC750 /* AppConnectAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConnectAuthorization.swift; sourceTree = "<group>"; };
+		BAB693FC24B6D445006FC750 /* AppConnectAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConnectAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB693F924B6D3B1006FC750 /* SwiftJWT in Frameworks */,
+				BAB693F624B6CEFE006FC750 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				BAB693F224B6CAEF006FC750 /* DeveloperApp.swift */,
+				BAB693FA24B6D413006FC750 /* AppConnectAuthorization.swift */,
+				BAB693FC24B6D445006FC750 /* AppConnectAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +119,10 @@
 			dependencies = (
 			);
 			name = "App Connect";
+			packageProductDependencies = (
+				BAB693F524B6CEFE006FC750 /* Alamofire */,
+				BAB693F824B6D3B1006FC750 /* SwiftJWT */,
+			);
 			productName = "App Connect";
 			productReference = BAB693D924B6BEE3006FC750 /* App Connect.app */;
 			productType = "com.apple.product-type.application";
@@ -136,6 +150,10 @@
 				Base,
 			);
 			mainGroup = BAB693D024B6BEE2006FC750;
+			packageReferences = (
+				BAB693F424B6CEFE006FC750 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BAB693F724B6D3B1006FC750 /* XCRemoteSwiftPackageReference "Swift-JWT" */,
+			);
 			productRefGroup = BAB693DA24B6BEE3006FC750 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -163,9 +181,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAB693F324B6CAEF006FC750 /* DeveloperApp.swift in Sources */,
+				BAB693FB24B6D414006FC750 /* AppConnectAuthorization.swift in Sources */,
 				BAB693DF24B6BEE3006FC750 /* ContentView.swift in Sources */,
 				BAB693DD24B6BEE3006FC750 /* App_ConnectApp.swift in Sources */,
 				BAB693EE24B6C714006FC750 /* AppListView.swift in Sources */,
+				BAB693FD24B6D445006FC750 /* AppConnectAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +377,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BAB693F424B6CEFE006FC750 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.1;
+			};
+		};
+		BAB693F724B6D3B1006FC750 /* XCRemoteSwiftPackageReference "Swift-JWT" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/IBM-Swift/Swift-JWT.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BAB693F524B6CEFE006FC750 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAB693F424B6CEFE006FC750 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		BAB693F824B6D3B1006FC750 /* SwiftJWT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAB693F724B6D3B1006FC750 /* XCRemoteSwiftPackageReference "Swift-JWT" */;
+			productName = SwiftJWT;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BAB693D124B6BEE2006FC750 /* Project object */;
 }
