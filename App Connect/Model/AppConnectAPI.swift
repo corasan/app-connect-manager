@@ -10,6 +10,7 @@ import Alamofire
 
 class AppConnectAPI: ObservableObject {
     @Published var apps: [DeveloperApp] = []
+    @Published var selectedAppId: String = ""
 
     private func get(_ endpoint: String, callback: @escaping (_ response: [String: Any]) -> Void) {
         let jwt = AppConnectAuthorization.getToken()
@@ -28,6 +29,11 @@ class AppConnectAPI: ObservableObject {
         }
     }
     
+    func selectAppId(id: String) {
+        print(id)
+        selectedAppId = id
+    }
+    
     func getApps() {
         get("apps") { res in
             for el in res["data"] as! [[String: Any]] {
@@ -39,9 +45,18 @@ class AppConnectAPI: ObservableObject {
         }
     }
     
-    func getAppInfo(id: String) {
-        get("apps/\(id)/appInfos") { res in
+    func getAppInfo() {
+        get("apps/\(selectedAppId)/appInfos") { res in
             print(res)
+        }
+    }
+    
+    func getAppBuilds() {
+        get("apps/\(selectedAppId)/builds") {
+            print($0)
+//            for el in $0["data"] as! [[String: Any]] {
+//
+//            }
         }
     }
 }

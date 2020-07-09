@@ -10,6 +10,7 @@ import SwiftUI
 struct AppListView: View {
     @Binding var selection: String?
     @Binding var data: [DeveloperApp]
+    @EnvironmentObject var api: AppConnectAPI
     
     var body: some View {
         List(selection: $selection) {
@@ -23,8 +24,8 @@ struct AppListView: View {
                             .font(.system(size: 20, weight: .semibold))
                             .padding(.leading, 5)
                     }
+                    .padding(.vertical, 12)
                 }
-                .padding(.vertical, 10)
                 .id(UUID().uuidString)
             }
         }
@@ -40,5 +41,6 @@ struct AppListView_Previews: PreviewProvider {
 
     static var previews: some View {
         AppListView(selection: $selection, data: $data)
+            .preferredColorScheme(.light)
     }
 }

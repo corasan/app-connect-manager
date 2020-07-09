@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject var api: AppConnectAPI
     @State var selected = 0
     var app: DeveloperApp
-
+    
     var body: some View {
         VStack {
             TabBar(selected: $selected)
@@ -24,6 +25,9 @@ struct MainView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .onAppear {
+            api.selectAppId(id: app.id)
+        }
     }
 }
 

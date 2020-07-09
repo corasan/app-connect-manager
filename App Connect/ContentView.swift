@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             AppListView(selection: $selection, data: $apps)
-//            MainView()
+            PlaceholderView()
         }
         .onChange(of: api.apps) { value in
             apps = value

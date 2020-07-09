@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BuildsView: View {
+    @EnvironmentObject var api: AppConnectAPI
+
     var body: some View {
         ScrollView {
             HStack {
@@ -15,6 +17,9 @@ struct BuildsView: View {
                 Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
                 Spacer()
             }
+        }
+        .onAppear {
+            api.getAppBuilds()
         }
     }
 }
